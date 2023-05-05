@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    font-family: 'VT323', sans-serif;
+}
+
+body {
+
+    background-size: cover;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/bannerN2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-bottom: 0;
+}
+
+.navbar {
+    background-color: #c24b35;
+    height: 12vh;
+    box-shadow: 2px 2px 10px;
+
+
+}
+
+#textoLogo {
+    color: whitesmoke;
+    font-size: 1.65vw;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.container-fluid {
+    flex-direction: row;
+    
+}
+
+#Comprasuplementos {
+    flex-direction: row-reverse;
+    justify-content: start;
+    background-color: rgba(236, 236, 236, 0.7);
+    border: 3px outset #c24b35;
+    border-top: 8px solid #c24b35;
+    width: 45%;
+    height: 90%;
+    overflow-y: scroll;
+    /* border-radius: 0px 10px 10px 10px; */
+    margin-left: 0rem;
+}
+
+#titulo {
+    color: #c24b35;
+}
+
+.subtitulo {
+    color: #c24b35;
+}
+
+#Compraniveis {
+    flex-direction: row-reverse;
+    justify-content: start;
+    border: 3px outset #c24b35;
+    border-top: 8px solid #c24b35;
+    background-color: #ecececb3;
+    width: 30%;
+    height: 65%;
+    border-radius: 0px 10px 10px 10px;
+}
+
+#logo {
+    width: 8vw;
+    height: 4vw;
+
+}
+
+#close {
+    width: 20px;
+    margin-bottom: 2.5%;
+    float: right;
+}
+
+
+#textoa {
+    width: 100%;
+}
+
+#acoes {
+    margin: 0;
+    border-top: 8px solid #c24b35;
+    border-left: 2px solid #c24b35;
+    border-right: 2px solid #c24b35;
+    border-bottom: 2px solid #c24b35;
+    width: 37%;
+    height: 37%;
+    margin-right: 2%;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(236, 236, 236, 0.7);
+    border-left: 2px solid #c24b35;
+    border-bottom: 2px solid #c24b35;
+    border-right: 2px solid #c24b35;
+    border-top: 8px solid #c24b35;
+    width: 80%;
+    height: 90%;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
+}
+
+.l1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+  
+}
+
+.l2 {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+
+.btn {
+    border-radius: 0;
+}
+
+.mainmenubtn {
+    width: 10vh;
+    background-color: #c24b35;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 10vh;
+    transition: 0.2s;
+ 
+}
+
+.mainmenubtn:hover {
+    background-color: #8a3323;
+}
+
+.dropdown {
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+.dropdown-child {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 10vw;
+
+    border-top: 2px solid #c24b35;
+    border-left: 2px solid #c24b35;
+    border-right: 2px solid #c24b35;
+    border-bottom: 2px solid #c24b35;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-child h5 {
+    color: #c24b35;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    transition: 0.15s;
+    margin: 0;
+    
+
+}
+
+.dropdown-child h5:last-child {
+    border-radius: 0px 0px 6px 6px;
+}
+
+.dropdown-child h5:hover {
+    color: white;
+    background-color: #c24b35;
+}
+
+.dropdown-child h5:active {
+    color: #c24b35;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+
+@media only screen and (max-device-width: 376px) {
+    .container-fluid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .l1 {
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    #acoes {
+        border-top: 2px solid #c24b35;
+        width: 100%;
+        margin-bottom: 1vh;
+    }
+
+    #info {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    #Compraniveis {
+        width: 100%;
+    }
+
+    #Comprasuplementos {
+        width: 100%;
+    }
+}

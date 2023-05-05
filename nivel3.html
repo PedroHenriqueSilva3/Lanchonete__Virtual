@@ -1,0 +1,421 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Language" content="pt-br">
+
+	<link rel="stylesheet" href="style3.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
+	<link rel="icon" href="img/logo.gif">
+	<title>Lanchonete</title>
+
+	<link rel="shortcut icon" href="img/logoN3.png" type="image/x-icon">
+	<script src="script.js"></script>
+</head>
+
+<nav class="navbar fixed-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#" id="textoLogo">
+			<img src="img/logoN3.png" alt="Logo" id="logo" class="d-inline-block align-text-top">
+			Lanchonete Virtual - Nível 3
+		</a>
+	</div>
+</nav>
+<br><br><br>
+
+<body onselectstart="return false"><br><br>
+
+	<div class="container-fluid row">
+
+
+
+		<div class="container l1 col-6">
+
+			<div id="info">
+				<tt><br>
+					<center>
+						<p>
+						<h5><b class="titulo">Informações:</b></p><br><br>
+							<p>
+								Dinheiro total.............: <b id="dinheiro2">R$ 30.00</b>
+							</p><br>
+							<p>
+								Pessoas na fila (Cachorro quente).....: <b id="pessoasNaFila">0</b>
+							</p><br>
+							<p>
+								Pessoas na fila (Hambúrguer)..........: <b id="Hamburguer">0</b>
+							</p><br>
+							<p>
+								Pessoas na fila (Batata Frita)........: <b id="Batata">0</b>
+							</p><br>
+
+							<p>
+								Pessoas na fila (Pastelão)............: <b id="Pastel">0</b>
+							</p><br>
+
+
+							<b class="titulo">
+								Ingredientes padrão:
+							</b><br><br>
+							Maionese...........: <span id="elm0">10</span><br><br>
+							Catchup............: <span id="elm1">10</span><br><br>
+							Mostarda...........: <span id="elm2">10</span><br><br>
+							Prato descartável..: <span id="elm3">10</span><br><br>
+							<b class="titulo">
+								<p>Ingredientes Cachorro quente:
+							</b><br><br><br>
+							Pão de hot dog.....: <span id="elm4">10</span><br><br>
+							Salsicha...........: <span id="elm5">10</span><br><br>
+							Batata Palha.......: <span id="elm6">10</span><br><br>
+							Purê de batata.....: <span id="elm7">10</span><br><br>
+							Milho..............: <span id="elm8">10</span><br><br>
+							<p>
+								<b class="titulo">Ingredientes Hambúrguer:</b>
+								<br><br><br>
+								Hambúrguer.........: <span id="elm9">10</span><br><br>
+								Queijo.............: <span id="elm10">10</span><br><br>
+								Bacon..............: <span id="elm11">10</span><br><br>
+								Tomate.............: <span id="elm12">10</span><br><br>
+								Alface.............: <span id="elm13">10</span><br><br>
+								Cebola.............: <span id="elm14">10</span><br><br>
+								Pão................: <span id="elm15">10</span><br><br>
+							<p>
+								<b class="titulo">Ingredientes Batata Frita:</b>
+								<br><br><br>
+								Óleo...............: <span id="elm16">10</span><br><br>
+								Batata.............: <span id="elm17">10</span><br><br>
+								Sal................: <span id="elm18">10</span><br><br>
+
+								<b class="titulo">Ingredientes Pastelão:</b>
+								<br><br><br>
+								Massa pastel.......: <span id="elm19">10</span><br><br>
+								Carne..............: <span id="elm20">10</span><br><br>
+								Queijo.............: <span id="elm21">10</span><br><br>
+								Azeitona...........: <span id="elm22">10</span><br><br>
+								Catupiry...........: <span id="elm23">10</span><br><br>
+								
+
+					</center><br></h5>
+					</p>
+				</tt>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="container l2 col-6 ">
+			<div id="dropdown" class="dropdown">
+				<button id="Menus" class="mainmenubtn"
+					onClick="Dropdownchild.style.display='block';fechar();tirarborda();Comprasuplementos.style.display='none';Compraniveis.style.display='none'"
+					style="box-shadow: -2px 2px  5px #00000067;width:10vh;border-radius: 10px 10px 10px 10px;">Ações</button>
+				<div id="Dropdownchild" class="dropdown-child">
+					<h5 onClick="vendeCachorroQuente()" style="cursor:pointer;">
+						Vender 1 Cachorro quente
+					</h5>
+
+					<h5 onClick="vendeHamburguer()" style="cursor:pointer;">
+						Vender 1 Hamburguer
+					</h5>
+
+					<h5 onClick="vendeBatata()" style="cursor:pointer;">
+						Vender 1 Batata
+					</h5>
+
+					<h5 onClick="vendePastel()" style="cursor:pointer;">
+						Vender 1 Pastelão
+					</h5>
+
+					<h5 onClick="Comprasuplementos.style.display='';Dropdownchild.style.display='none';ingredientes()"
+						style="cursor:pointer;">
+						Comprar ingredientes
+					</h5>
+					<h5 onClick="Compraniveis.style.display='';Dropdownchild.style.display='none';ingredientes()"
+						style="cursor:pointer;">
+						Comprar níveis
+					</h5>
+				</div>
+			</div>
+
+
+
+
+			<div id="Comprasuplementos" style="display:none;">
+				<b onClick="Comprasuplementos.style.display='none';fechar();tirarborda();ingredientes();buttonClose();tirarborda()"
+					style="cursor:pointer;">
+					<img id="close" src="img/close.png" alt=""></b><br>
+				<tt>
+					<p id="textoa">
+					<h5 align="center" id="titulo"><b>Comprar ingredientes </b></h5>
+					<br>
+					<h5 align="center" class="subtitulo"><b>---| Padrão |---</b><br><br></h5>
+					<h5 align="center">Maionese<br><b id="precos0" onmouseenter="mouseEnter(0)"
+							onmouseleave="mouseLeave(0)" onClick="buySupplement(0)" style="cursor:pointer;">[1x]</b><b
+							id="precos31" onmouseenter="mouseEnter(31)" onmouseleave="mouseLeave(31)"
+							onClick="buySupplement(31)" style="cursor:pointer;">[10x]</b><br><br>
+					</h5>
+
+					<h5 align="center">Catchup<br><b id="precos1" onmouseenter="mouseEnter(1)"
+							onmouseleave="mouseLeave(1)" onClick="buySupplement(1)" style="cursor:pointer;">[1x]</b><b
+							id="precos32" onmouseenter="mouseEnter(32)" onmouseleave="mouseLeave(32)"
+							onClick="buySupplement(32)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Mostarda<br><b id="precos2" onmouseenter="mouseEnter(2)"
+							onmouseleave="mouseLeave(2)" onClick="buySupplement(2)" style="cursor:pointer;">[1x]</b><b
+							id="precos33" onmouseenter="mouseEnter(33)" onmouseleave="mouseLeave(33)"
+							onClick="buySupplement(33)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">
+						Prato<br><b id="precos3" onmouseenter="mouseEnter(3)" onmouseleave="mouseLeave(3)"
+							onClick="buySupplement(3)" style="cursor:pointer;">[1x]</b><b id="precos34"
+							onmouseenter="mouseEnter(34)" onmouseleave="mouseLeave(34)" onClick="buySupplement(34)"
+							style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center" class="subtitulo"><b>---| Cachorro quente |---</b><br><br></h5>
+
+					<h5 align="center">Pão de hot dog<br><b id="precos4" onmouseenter="mouseEnter(4)"
+							onmouseleave="mouseLeave(4)" onClick="buySupplement(4)" style="cursor:pointer;">[1x]</b><b
+							id="precos35" onmouseenter="mouseEnter(35)" onmouseleave="mouseLeave(35)"
+							onClick="buySupplement(35)" style="cursor:pointer;">[10x]</b><br><br>
+					</h5>
+
+					<h5 align="center">Salsicha<br><b id="precos5" onmouseenter="mouseEnter(5)"
+							onmouseleave="mouseLeave(5)" onClick="buySupplement(5)" style="cursor:pointer;">[1x]</b><b
+							id="precos36" onmouseenter="mouseEnter(36)" onmouseleave="mouseLeave(36)"
+							onClick="buySupplement(36)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Batata Palha<br><b id="precos6" onmouseenter="mouseEnter(6)"
+							onmouseleave="mouseLeave(6)" onClick="buySupplement(6)" style="cursor:pointer;">[1x]</b><b
+							id="precos37" onmouseenter="mouseEnter(37)" onmouseleave="mouseLeave(37)"
+							onClick="buySupplement(37)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Purê de batata<br><b id="precos7" onmouseenter="mouseEnter(7)"
+							onmouseleave="mouseLeave(7)" onClick="buySupplement(7)" style="cursor:pointer;">[1x]</b><b
+							id="precos38" onmouseenter="mouseEnter(38)" onmouseleave="mouseLeave(38)"
+							onClick="buySupplement(38)" style="cursor:pointer;">[10x]</b><br><br>
+					</h5>
+
+					<h5 align="center">Milho<br><b id="precos8" onmouseenter="mouseEnter(8)"
+							onmouseleave="mouseLeave(8)" onClick="buySupplement(8)" style="cursor:pointer;">[1x]</b><b
+							id="precos39" onmouseenter="mouseEnter(39)" onmouseleave="mouseLeave(39)"
+							onClick="buySupplement(39)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center" class="subtitulo"><b>---| Hambúrguer
+							|---</b><br><br></h5>
+
+
+					<h5 align="center">Hambúrguer<br><b id="precos9" onmouseenter="mouseEnter(9)"
+							onmouseleave="mouseLeave(9)" onClick="buySupplement(9)" style="cursor:pointer;">[1x]</b><b
+							id="precos40" onmouseenter="mouseEnter(40)" onmouseleave="mouseLeave(40)"
+							onClick="buySupplement(40)" style="cursor:pointer;">[10x]</b></h5>
+
+					<h5 align="center">Queijo<br><b id="precos10" onmouseenter="mouseEnter(10)"
+							onmouseleave="mouseLeave(10)" onClick="buySupplement(10)" style="cursor:pointer;">[1x]</b><b
+							id="precos41" onmouseenter="mouseEnter(41)" onmouseleave="mouseLeave(41)"
+							onClick="buySupplement(41)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Bacon<br><b id="precos11" onmouseenter="mouseEnter(11)"
+							onmouseleave="mouseLeave(11)" onClick="buySupplement(11)" style="cursor:pointer;">[1x]</b><b
+							id="precos42" onmouseenter="mouseEnter(42)" onmouseleave="mouseLeave(42)"
+							onClick="buySupplement(42)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Tomate<br><b id="precos12" onmouseenter="mouseEnter(12)"
+							onmouseleave="mouseLeave(12)" onClick="buySupplement(12)" style="cursor:pointer;">[1x]</b><b
+							id="precos43" onmouseenter="mouseEnter(43)" onmouseleave="mouseLeave(43)"
+							onClick="buySupplement(43)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Alface<br><b id="precos13" onmouseenter="mouseEnter(13)"
+							onmouseleave="mouseLeave(13)" onClick="buySupplement(13)" style="cursor:pointer;">[1x]</b><b
+							id="precos44" onmouseenter="mouseEnter(44)" onmouseleave="mouseLeave(44)"
+							onClick="buySupplement(44)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Cebola<br><b id="precos14" onmouseenter="mouseEnter(14)"
+							onmouseleave="mouseLeave(14)" onClick="buySupplement(14)" style="cursor:pointer;">[1x]</b><b
+							id="precos45" onmouseenter="mouseEnter(45)" onmouseleave="mouseLeave(45)"
+							onClick="buySupplement(45)" style=" cursor:pointer;">[10x]</b><br><br> </h5>
+
+					<h5 align="center">Pão hambúrguer<br><b id="precos15" onmouseenter="mouseEnter(15)"
+							onmouseleave="mouseLeave(15)" onClick="buySupplement(15)" style="cursor:pointer;">[1x]</b><b
+							id="precos46" onmouseenter="mouseEnter(46)" onmouseleave="mouseLeave(46)"
+							onClick="buySupplement(46)" style=" cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center" class="subtitulo"><b>---| Batata Frita
+							|---</b><br><br></h5>
+
+					<h5 align="center">Óleo<br><b id="precos16" onmouseenter="mouseEnter(16)"
+							onmouseleave="mouseLeave(16)" onClick="buySupplement(16)" style="cursor:pointer;">[1x]</b><b
+							id="precos47" onmouseenter="mouseEnter(47)" onmouseleave="mouseLeave(47)"
+							onClick="buySupplement(47)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Batata<br><b id="precos17" onmouseenter="mouseEnter(17)"
+							onmouseleave="mouseLeave(17)" onClick="buySupplement(17)" style="cursor:pointer;">[1x]</b><b
+							id="precos48" onmouseenter="mouseEnter(48)" onmouseleave="mouseLeave(48)"
+							onClick="buySupplement(48)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Sal<br><b id="precos18" onmouseenter="mouseEnter(18)"
+							onmouseleave="mouseLeave(18)" onClick="buySupplement(18)" style="cursor:pointer;">[1x]</b><b
+							id="precos49" onmouseenter="mouseEnter(49)" onmouseleave="mouseLeave(49)"
+							onClick="buySupplement(49)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+							<h5 align="center" class="subtitulo"><b>---| Pastelão
+								|---</b><br><br></h5>
+
+					<h5 align="center">Massa pastel<br><b id="precos19" onmouseenter="mouseEnter(19)"
+							onmouseleave="mouseLeave(19)" onClick="buySupplement(19)" style="cursor:pointer;">[1x]</b><b
+							id="precos50" onmouseenter="mouseEnter(50)" onmouseleave="mouseLeave(50)"
+							onClick="buySupplement(50)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Carne<br><b id="precos20" onmouseenter="mouseEnter(20)"
+							onmouseleave="mouseLeave(20)" onClick="buySupplement(20)" style="cursor:pointer;">[1x]</b><b
+							id="precos51" onmouseenter="mouseEnter(51)" onmouseleave="mouseLeave(51)"
+							onClick="buySupplement(51)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Queijo<br><b id="precos21" onmouseenter="mouseEnter(21)"
+							onmouseleave="mouseLeave(21)" onClick="buySupplement(21)" style="cursor:pointer;">[1x]</b><b
+							id="precos52" onmouseenter="mouseEnter(52)" onmouseleave="mouseLeave(52)"
+							onClick="buySupplement(52)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Azeitona<br><b id="precos22" onmouseenter="mouseEnter(22)"
+							onmouseleave="mouseLeave(22)" onClick="buySupplement(22)" style="cursor:pointer;">[1x]</b><b
+							id="precos53" onmouseenter="mouseEnter(53)" onmouseleave="mouseLeave(53)"
+							onClick="buySupplement(53)" style="cursor:pointer;">[10x]</b><br><br></h5>
+
+					<h5 align="center">Catupiry<br><b id="precos23" onmouseenter="mouseEnter(23)"
+							onmouseleave="mouseLeave(23)" onClick="buySupplement(23)" style="cursor:pointer;">[1x]</b><b
+							id="precos54" onmouseenter="mouseEnter(54)" onmouseleave="mouseLeave(54)"
+							onClick="buySupplement(54)" style="cursor:pointer;">[10x]</b><br><br></h5>
+					</p>
+				</tt>
+			</div>
+
+
+
+
+			<div id="Compraniveis" style="display: none;">
+				<tt>
+					<p id="textoa">
+						<span onClick="Compraniveis.style.display='none';buttonClose();tirarborda()"
+							style="cursor:pointer;"><img id="close" src="img/close.png" alt=""></b>
+							<span><br>
+								<center><b class="titulo">Comprar níveis</b></center>
+								</b>
+								<center>
+									<br>
+									<b id="lev0" onClick="buyLevel(0)" ondblClick="buyLevel(0)"
+										style="cursor:pointer;">[Nível
+										0] </b><img id="img0" width="10px" src="img/check.png" alt=""><br><br>
+									<b onmouseenter="mouseEnterl(1)" onmouseleave="mouseLeavel(1)" id="lev1"
+										onClick="buyLevel(1)" ondblClick="buyLevel(1)" style="cursor:pointer;">[Nível
+										1] </b><img id="img1" width="10px" src="img/check.png" alt=""><br><br>
+									<b onmouseenter="mouseEnterl(2)" onmouseleave="mouseLeavel(2)" id="lev2"
+										onClick="buyLevel(2)" ondblClick="buyLevel(2)" style="cursor:pointer;">[Nível
+										2] </b><img id="img2" width="10px" src="img/check.png" alt=""><br><br>
+									<b onmouseenter="mouseEnterl(3)" onmouseleave="mouseLeavel(3)" id="lev3"
+										onClick="buyLevel(3)" ondblClick="buyLevel(3)" style="cursor:pointer;">[Nível
+										3] </b><img id="img3" width="10px" src="img/check.png" alt=""><br><br>
+									<b onmouseenter="mouseEnterl(4)" onmouseleave="mouseLeavel(4)" id="lev4"
+										onClick="buyLevel(4)" ondblClick="buyLevel(4)" style="cursor:pointer;">[Nível
+										4] </b><img id="img4" width="10px" src="img/cadeado.png" alt=""><br><br>
+									<b onmouseenter="mouseEnterl(5)" onmouseleave="mouseLeavel(5)" id="lev5"
+										onClick="buyLevel(5)" ondblClick="buyLevel(5)" style="cursor:pointer;">[Nível
+										5] </b><img id="img5" width="10px" src="img/cadeado.png" alt=""><br><br>
+								</center>
+
+				</tt>
+				</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+
+		function atualiza() {
+			dinheiroLique = dinheiroTotal.toString();
+			if (dinheiroLique.indexOf(".") != -1) {
+				dinheiro2.innerHTML = "R$ " + dinheiroLique.substring(0, dinheiroLique.indexOf(".") + 3);
+			}
+			else {
+				dinheiro2.innerHTML = "R$ " + dinheiroTotal + ".00";
+			}
+
+			pessoasNaFila.innerHTML = pessoasnafila
+			Hamburguer.innerHTML = hamburguer
+			Batata.innerHTML = batata
+			Pastel.innerHTML = pastel
+			for (i = 0; i < 24; i++) {
+				document.all["elm" + i].innerHTML = suplements[i];
+			}
+
+			setTimeout("atualiza()", 10)
+		}
+		atualiza()
+		aumentaFila()
+		aumentaFila2()
+		aumentaFila3()
+		aumentaFila4()
+
+		levels = new Array()
+		levels[0] = 1
+		levels[1] = 1
+		levels[2] = 1
+		levels[3] = 1
+		levels[4] = 0
+		levels[5] = 2
+
+		function tirarborda() {
+
+
+			var borda = document.querySelector("#Menus");
+			borda.setAttribute('style', 'border-radius: 10px 10px 0px 0px;background-color:#8a2614;border-radius: 10px 10px 0px 0px;width:100%;box-shadow: 0px;');
+
+
+
+		}
+
+		function ingredientes() {
+			var dropdrop = document.querySelector('#dropdown')
+			var borda = document.querySelector("#Menus");
+			borda.setAttribute('style', 'background-color: #8a2614;border-radius: 10px 0px 0px 10px;width:10vh;');
+		}
+
+		function mouseEnter(numb) {
+
+			document.all["precos" + numb].innerHTML = "[R$ " + precos[numb] + "]";
+		}
+
+
+
+
+
+		function mouseLeave(numb) {
+			if (numb > 30) {
+				document.all["precos" + numb].innerHTML = "[10x]"
+			} else {
+
+				document.all["precos" + numb].innerHTML = "[1x]";
+			}
+		}
+
+		function mouseEnterl(numb) {
+			if (levels[numb] != 1){
+
+				document.all["lev" + numb].innerHTML = "[R$ " + precosNiveis[numb] + "] ";
+			}
+		}
+
+		function mouseLeavel(numb) {
+			document.all["lev" + numb].innerHTML = "[Nível " + numb + "] ";
+		}
+
+
+	</script>
+
+</body>
+
+</html>
